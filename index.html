@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Boxes</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            color: goldenrod;
+            font-size: 2.5rem;
+            margin: 20px 0;
+        }
+
+        /* Main container styling */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 0 20px;
+            overflow-x: auto;
+        }
+
+        /* Feedback box styling */
+        .feedback-box {
+            flex: 1 1 calc(50% - 40px);
+            min-width: 300px;
+            max-width: 600px;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Image styling */
+        .feedback-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 15px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .feedback-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Feedback text styling */
+        .feedback-content {
+            max-width: 100%;
+        }
+
+        .feedback-text {
+            font-size: 1rem;
+            color: #333;
+            line-height: 1.5;
+            position: relative;
+            margin: 0;
+        }
+
+        /* Decorative quotation mark */
+        .feedback-text::before {
+            content: '“';
+            font-size: 4rem;
+            color: gold;
+            position: absolute;
+            top: -20px;
+            left: -25px;
+        }
+
+        .author {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #555;
+            text-align: right;
+        }
+
+        /* Feedback form styling */
+        .feedback-form {
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f3f3f3;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .feedback-form h2 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            color: #333;
+            text-align: center;
+        }
+
+        .feedback-form label {
+            font-weight: bold;
+            color: #555;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .feedback-form input,
+        .feedback-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .feedback-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .feedback-form button:hover {
+            background-color: #45a049;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 768px) {
+            .feedback-box {
+                flex: 1 1 100%;
+            }
+
+            .feedback-photo {
+                width: 80px;
+                height: 80px;
+            }
+
+            .feedback-text::before {
+                font-size: 3rem;
+                top: -15px;
+                left: -15px;
+            }
+
+            .header {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">FEEDBACK SECTION</div>
+
+    <!-- Feedback Boxes Container -->
+    <div class="container">
+        <div class="feedback-box">
+            <div class="feedback-photo">
+                <img src="ujjwl3pic.jpg" alt="User Photo">
+            </div>
+            <div class="feedback-content">
+                <p class="feedback-text">
+                    Excellent service and attention to detail. I felt valued as a customer, and my needs were met promptly.
+                </p>
+                <p class="author">- Alice Johnson</p>
+            </div>
+        </div>
+        <div class="feedback-box">
+            <div class="feedback-photo">
+                <img src="https://via.placeholder.com/100" alt="User Photo">
+            </div>
+            <div class="feedback-content">
+                <p class="feedback-text">
+                    The service was amazing and exceeded my expectations.
+                </p>
+                <p class="author">- Bob Williams</p>
+            </div>
+        </div>
+        <div class="feedback-box">
+            <div class="feedback-photo">
+                <img src="ujjwl3pic.jpg" alt="User Photo">
+            </div>
+            <div class="feedback-content">
+                <p class="feedback-text">
+                    Excellent service and attention to detail. I felt valued as a customer, and my needs were met promptly.
+                </p>
+                <p class="author">- Alice Johnson</p>
+            </div>
+        </div>  <div class="feedback-box">
+            <div class="feedback-photo">
+                <img src="ujjwl3pic.jpg" alt="User Photo">
+            </div>
+            <div class="feedback-content">
+                <p class="feedback-text">
+                    Excellent service and attention to detail. I felt valued as a customer, and my needs were met promptly.
+                </p>
+                <p class="author">- Alice Johnson</p>
+            </div>
+        </div>  <div class="feedback-box">
+            <div class="feedback-photo">
+                <img src="ujjwl3pic.jpg" alt="User Photo">
+            </div>
+            <div class="feedback-content">
+                <p class="feedback-text">
+                    Excellent service and attention to detail. I felt valued as a customer, and my needs were met promptly.
+                </p>
+                <p class="author">- Alice Johnson</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feedback Form -->
+    <div class="feedback-form">
+        <h2>Leave Your Feedback</h2>
+        <form action="/submit_feedback" method="post">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="photo">Photo URL</label>
+            <input type="url" id="photo" name="photo" placeholder="https://example.com/photo.jpg" required>
+
+            <label for="feedback">Your Feedback</label>
+            <textarea id="feedback" name="feedback" rows="4" required></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+</body>
+</html>
